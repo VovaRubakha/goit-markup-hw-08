@@ -1,36 +1,52 @@
 .feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
-    &-list{
+  }
+  @media screen and (min-width: 1200px) {
+    &-list {
       display: flex;
-      &__item + &__item{
+      &__item + &__item {
         margin-left: 30px;
-      } 
-    
       }
-    &__item{
-      max-width: 270px;
-      }
-    &__item + &__item{
+    }
+  }
+  @media screen and (min-width: 768px)and (max-width: 1199px) {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+      &__item {
         margin-left: 30px;
-      } 
-    &__box {
-      @extend %align-list;
-      justify-content: center;    
+        margin-top: 30px;
+        flex-basis: calc((100% - 60px) / 2);
+      }
+    }
+  }
+
+  &__box {
+    @extend %align-list;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
       width: 270px;
-      height: 120px;
-      border-radius: 4px;
-      background-color: var(--primary-button-color);
-    }   
-    &__title {
-      color: var(--main-text-color);
-      text-transform: uppercase;
-      @include font(14px, 700, 0.03em, 1.14);
-      margin-top: 30px;
     }
-    &__description {
-      color: var(--title-text-color);
-      @include font(14px, 400, 0.03em, 1.71);
-      margin-top: 10px;
-    }
-  }  
+    width: auto;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--primary-button-color);
+  }
+  &__title {
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    @include font(14px, 700, 0.03em, 1.14);
+    margin-top: 30px;
+  }
+  &__description {
+    color: var(--title-text-color);
+    @include font(14px, 400, 0.03em, 1.71);
+    margin-top: 10px;
+  }
+}

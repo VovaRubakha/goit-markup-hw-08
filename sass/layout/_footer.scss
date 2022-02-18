@@ -1,0 +1,137 @@
+.footer {
+  background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .logo {
+    color: var(--primary-wite-color);
+  }
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__address {
+    margin-right: 70px;
+  }
+  &-connect {
+    & .social-link {
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      color: var(--primary-wite-color);
+      fill: var(--primary-wite-color);
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .social-link:hover,
+    .social-link:focus {
+      background-color: var(--accent-color);
+    }
+  }
+}
+address {
+  margin-top: 20px;
+  & .link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  & .link-alt {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  & .item + .item {
+    margin-top: 9px;
+  }
+}
+.footer-connect {
+  margin-top: 12px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--primary-wite-color);
+  }
+}
+.connect-icon {
+  fill: var(--primary-button-color);
+}
+/* ---------subs---------- */
+
+.subscription {
+  margin-top: 12px;
+  display: block;
+  flex-direction: row;
+  margin-left: auto;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__label {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--primary-wite-color);
+  }
+  &__input {
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--primary-wite-color);
+    .subscription input + & {
+      display: block;
+    }
+  }
+  & form {
+    display: flex;
+    justify-content: flex-end;
+    width: 600px;
+    align-items: flex-end;
+  }
+  & input {
+    padding-left: 16px;
+    background: transparent;
+  }
+  & form button[type="submit"] {
+    position: relative;
+
+    height: 50px;
+    min-width: 200px;
+    margin-left: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    @extend %align-list;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--primary-wite-color);
+    border: none;
+    border-radius: 4px;
+    background: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+.subscription-button .connect-icon {
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 10px;
+}

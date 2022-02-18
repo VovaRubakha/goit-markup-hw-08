@@ -1,0 +1,53 @@
+.our-team {
+    background-color: var(--primary-button-color);  
+    padding-top: 94px;
+    padding-bottom: 94px;  
+    &__title {
+      @include font(36px, 700, 0.03em, 1.17);
+      text-align: center;
+      margin-bottom: 50px;
+    }  
+    &__list {
+      @extend %align-list;
+      & .item + .item {
+        margin-left: 30px;
+      }
+      & .item {
+        background: #ffffff;      
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        text-align: center;
+      }
+    }   
+  }  
+  .social-block {
+    padding: 30px;
+    &__title {
+      color: var(--main-text-color);
+      @include font(16px, 500, 0.03em, 1.19);    
+      margin-bottom: 10px;
+    }
+    &__duties {
+      color: var(--title-text-color);
+      @include font(16px, 400, 0.03em, 1.19);
+      margin-bottom: 16px;
+    }
+    &__list {
+      @extend %align-list;
+      justify-content: center;  
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    &__item + &__item {
+      margin-left: 10px;
+    }
+  }
+  .our-team-icon {
+    fill: var(--icon-primary-color);    
+    .social-link:hover &,
+    .social-link:focus & {
+      fill: currentColor;
+    }
+  }

@@ -1,0 +1,29 @@
+body {  
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 1.17;
+  }
+  
+  .link {
+    color: var(--title-text-color);
+    @include animation;
+    
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+  
+  }
+
+  }
+  .list {
+    list-style: none;
+
+  }
+  .item {
+    color: var(--main-text-color);
+    @include font(14px, 500, 0.02em, 1.14);
+    list-style: none;
+    font-style: normal;
+  }

@@ -1,18 +1,19 @@
 .feature {
     padding-top: 94px;
     padding-bottom: 94px;
-    &__list {
+    &-list{
       display: flex;
-      & {
-        display: flex;
-      }
-      & .item{
-        max-width: 270px;
-      }
-      & .item + .item {
+      &__item + &__item{
         margin-left: 30px;
       } 
-    }
+    
+      }
+    &__item{
+      max-width: 270px;
+      }
+    &__item + &__item{
+        margin-left: 30px;
+      } 
     &__box {
       @extend %align-list;
       justify-content: center;    
@@ -20,8 +21,7 @@
       height: 120px;
       border-radius: 4px;
       background-color: var(--primary-button-color);
-    } 
-    
+    }   
     &__title {
       color: var(--main-text-color);
       text-transform: uppercase;

@@ -1,15 +1,17 @@
 .button {
+  box-sizing: border-box;
     color: var(--primary-wite-color);
     background-color: var(--accent-color);
-    @include font(16px, 500, 0.03em, 1.62);
- 
+    @include font(16px, 500, 0.03em, 1.62); 
     font-family: inherit;
-    border: none;
-  
+    border: none;  
     padding: 10px 32px;
     border-radius: 4px;
+    &:hover,
+    &:focus {       
+   background-color: #177cce;
   }
-  
+}
   .button-secondary {
     color: var(--primary-text-color);
     background-color: var(--primary-button-color);

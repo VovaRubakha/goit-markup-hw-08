@@ -18,8 +18,7 @@
       cursor: pointer;
       color: var(--primary-wite-color);
       fill: var(--primary-wite-color);
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      @include animation;
     }
     .social-link:hover,
     .social-link:focus {
@@ -27,25 +26,26 @@
     }
   }
 }
-address {
-  margin-top: 20px;
-  & .link {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
-  & .link-alt {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  & .item + .item {
-    margin-top: 9px;
+.address {  
+  &-list{
+    margin-top: 20px;
+    &__item + &__item {
+      margin-top: 9px;      
+    }
+    &__link {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+    }
+    &__alt {
+      color: rgba(255, 255, 255, 0.6);
+    }
   }
 }
 .footer-connect {
   margin-top: 12px;
-
   &__title {
     margin-bottom: 20px;
     font-weight: bold;
@@ -53,7 +53,6 @@ address {
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: var(--primary-wite-color);
   }
 }
@@ -96,19 +95,19 @@ address {
       display: block;
     }
   }
+  
   & form {
     display: flex;
     justify-content: flex-end;
     width: 600px;
     align-items: flex-end;
   }
-  & input {
+  &__input {
     padding-left: 16px;
     background: transparent;
   }
-  & form button[type="submit"] {
+  &-button {
     position: relative;
-
     height: 50px;
     min-width: 200px;
     margin-left: 10px;
@@ -128,10 +127,15 @@ address {
     background: var(--accent-color);
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover,
+    &:focus {       
+   background-color: #177cce;
+    }
+  }
+  &-button__icon {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 10px;
   }
 }
-.subscription-button .connect-icon {
-  flex-direction: column;
-  align-items: flex-end;
-  margin-left: 10px;
-}
+

@@ -32,16 +32,18 @@
     &__title {
       font-weight: 700;
       font-size: 20px;
-      line-height: 1.5px;
+      line-height: 1.5;
       text-align: center;
       letter-spacing: 0.03em;    
       color: var(--main-text-color);
       margin-bottom: 12px;
 
     }
-    &__field {
-      margin-bottom: 10px;
-    }
+    &-form{
+      &__field {
+        margin-bottom: 10px;
+      }
+    } 
     &__icon {
       position: absolute;
       left: 8px;
@@ -94,12 +96,7 @@
     
       color: rgba(255, 255, 255, 0.6);
     }
-
   }
-  .input-wrapper {
-    position: relative;
-  }  
-
   .modal-check-text {
     font-weight: 400;
     font-size: 12px;
@@ -111,6 +108,10 @@
     justify-content: center;
     align-items: flex-end;
   }
+  .input-wrapper {
+    position: relative;
+  }  
+
     
   .check-icon {
     fill: transparent;
@@ -163,6 +164,10 @@
   
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    &:hover,
+    &:focus {       
+      background-color: #177cce;
+    }
   }
   /* кнопка Х */
   .close-button {
@@ -181,18 +186,19 @@
   
     border-radius: 50%;
     cursor: pointer;
+    &__icon {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      fill: var(--primary-text-color);
+      @include animation;
+      .close-button:hover &,
+      .close-button:focus & {
+        fill: var(--accent-color);
+      }
   }
-  .close-icon {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    fill: var(--primary-text-color);
-    @include animation;
-    .close-button:hover &,
-    .close-button:focus & {
-      fill: var(--accent-color);
-    }
-  }
+
+}
   
 
   

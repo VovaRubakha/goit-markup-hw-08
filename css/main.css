@@ -23,7 +23,7 @@
   margin: -1px;
 }
 
-.header__container, .header-nav, .feature__box, .employment-label__text, .social-block-list, .portfolio-buttons-list, .subscription-button {
+.header__container, .header-nav, .feature__box, .employment-label__text, .social-block-list, .subscription-button {
   display: flex;
   align-items: center;
 }
@@ -869,6 +869,8 @@ main {
 
 .portfolio-buttons {
   margin-bottom: 50px;
+  width: 80%;
+  margin-left: 0px;
 }
 
 .portfolio-buttons__title {
@@ -876,11 +878,13 @@ main {
 }
 
 .portfolio-buttons-list {
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.portfolio-buttons-list__item + .portfolio-buttons-list__item {
-  margin-left: 8px;
+.portfolio-buttons-list__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .portfolio-cards {
@@ -889,34 +893,66 @@ main {
 }
 
 .portfolio-cards__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
-.portfolio-cards__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  list-style: none;
 }
 
 .portfolio-cards__list .portfolio-cards__item {
-  margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 90px) / 3);
 }
 
 .portfolio-cards__item {
-  display: flex;
-  flex-wrap: wrap;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards__item:hover, .portfolio-cards__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .portfolio-cards__list .portfolio-cards__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .portfolio-cards__list .portfolio-cards__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-buttons {
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: auto;
+  }
+  .portfolio-buttons__title {
+    text-align: center;
+  }
+  .portfolio-buttons-list {
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-buttons-list__item + .portfolio-buttons-list__item {
+    margin-left: 8px;
+  }
 }
 
 .bordered {

@@ -7,12 +7,26 @@
   }
   &__container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
   }
   &__address {
-    margin-right: 70px;
+    text-align: center;
   }
   &-connect {
+    margin-top: 60px;
+      &__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-wite-color);
+
+  }
     & .social-link {
       background-color: rgba(255, 255, 255, 0.1);
       cursor: pointer;
@@ -23,6 +37,38 @@
     .social-link:hover,
     .social-link:focus {
       background-color: var(--accent-color);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row; 
+      justify-content: space-around;  
+      align-items:normal; 
+    }
+    &-connect {
+      margin-top: 0px
+    }
+  }
+  @media screen and (min-width: 1200px){
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+    &__address{
+      text-align: start;
+      margin-right: 70px;
+      
+    }
+    &-connect{    
+        &__title{
+          text-align: start;
+        }       
+      margin-top: 12px;
+            
     }
   }
 }
@@ -44,34 +90,22 @@
     }
   }
 }
-.footer-connect {
-  margin-top: 12px;
-  &__title {
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--primary-wite-color);
-  }
-}
 .connect-icon {
   fill: var(--primary-button-color);
 }
-/* ---------subs---------- */
-
 .subscription {
-  margin-top: 12px;
+  margin-top: 60px;
   display: block;
-  flex-direction: row;
-  margin-left: auto;
+  width: 100%;
+
   &__form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 20px;
   }
   &__label {
+    text-align: center;
     position: relative;
 
     margin-bottom: 20px;
@@ -85,6 +119,10 @@
     color: var(--primary-wite-color);
   }
   &__input {
+    padding-left: 16px;
+    background: transparent;
+    min-width: 450px;
+    margin: auto;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -94,23 +132,14 @@
     .subscription input + & {
       display: block;
     }
-  }
-  
-  & form {
-    display: flex;
-    justify-content: flex-end;
-    width: 600px;
-    align-items: flex-end;
-  }
-  &__input {
-    padding-left: 16px;
-    background: transparent;
-  }
-  &-button {
+  }  
+  &-button {  
     position: relative;
     height: 50px;
     min-width: 200px;
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
 
     font-weight: 700;
     font-size: 16px;
@@ -136,6 +165,36 @@
     flex-direction: column;
     align-items: flex-end;
     margin-left: 10px;
+  } 
+
+  @media screen and (min-width: 1200px){
+    width: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+    & form {
+      display: flex;
+      justify-content: flex-end;
+      width: 600px;
+      align-items: flex-end;
+    }
+    &__label {
+      text-align: start;
+    }
+    &-button {
+      margin-left: 10px;
+    }
+    &__input {
+      padding-left: 16px;
+      background: transparent;
+      min-width: 0px;
+      margin: 0px;
+      height: 50px;
   }
 }
-
+}

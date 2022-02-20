@@ -57,19 +57,18 @@
     border: 1px solid var(--icon-primary-color);
     border-radius: 4px;
     padding: 16px 32px;
-    @media screen and (min-width: 480px){
-      padding: 16px 0px 16px 0px;
-      justify-content: center;
-      width: auto;
-    }
-    &:hover,
+    &:hover ,
     &:focus {
-      fill: var(--accent-color);
-      border: 1px solid var(--accent-color);
+     border-color: var(--accent-color);     
     }
+    &:hover .icon,
+    &:focus .icon{
+      fill: var(--accent-color);     
+    }    
     & .icon{
       fill: var(--icon-primary-color);
-      @include animation
+      @include animation;
+      
     }
     &__icon {
       fill: var(--icon-primary-color);
@@ -77,6 +76,11 @@
       .clients-box:focus & {
         fill: var(--accent-color);
       }
+    }
+    @media screen and (min-width: 480px){
+      padding: 16px 0px 16px 0px;
+      justify-content: center;
+      width: auto;
     }
   }  
 }   

@@ -20,8 +20,6 @@
     }
   }
   &-cards{
-    margin-left: auto;
-    margin-right: auto;
     &__list {
       list-style: none;
     }
@@ -29,7 +27,7 @@
       margin-top: 30px;
     }    
     &__item {
-      @include animation
+       @include animation
     }   
     &__item:hover,
     &__item:focus {
@@ -88,7 +86,7 @@
     background: var(--primary-wite-color);
     border: 1px solid #eeeeee;
     box-sizing: border-box;
-    padding: 20px 24px;
+    padding: 20px 0px 20px 24px;
     &__description {
       color: var(--main-text-color);
       @include font(18px, 700, 0.06em, 2);

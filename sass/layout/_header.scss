@@ -101,12 +101,13 @@
     }
   }
 }
-.header__menu-open {
+.header-menu-open {
   margin-top: 5px;
-  border: none;
+    border: none;
   background-color: transparent;
   display: none;
   margin-left: auto;
+
   @media screen and (max-width: 767px) {
     display: block;
   }

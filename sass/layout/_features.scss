@@ -5,9 +5,17 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
+  &-list {
+    &__item{
+      margin-bottom: 30px;
+    }
+  }
   @media screen and (min-width: 1200px) {
     &-list {
       display: flex;
+      &__item{
+        margin-bottom: 0px;
+      }
       &__item + &__item {
         margin-left: 30px;
       }
@@ -20,6 +28,7 @@
       margin-left: -30px;
       margin-top: -30px;
       &__item {
+        margin-bottom: 0px;
         margin-left: 30px;
         margin-top: 30px;
         flex-basis: calc((100% - 60px) / 2);
@@ -43,6 +52,10 @@
     text-transform: uppercase;
     @include font(14px, 700, 0.03em, 1.14);
     margin-top: 30px;
+    text-align: center ; 
+    @media screen and (min-width: 768px){  
+      text-align: start ;
+    }
   }
   &__description {
     color: var(--title-text-color);

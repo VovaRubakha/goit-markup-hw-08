@@ -15,7 +15,7 @@
   .button-secondary {
     color: var(--primary-text-color);
     background-color: var(--primary-button-color);
-    @include font(16px, 500, 0.03em, 1.88);
+    @include font(15px, 500, 0.03em, 1.62);
     text-align: center;  
     border: none;
     font-family: inherit;

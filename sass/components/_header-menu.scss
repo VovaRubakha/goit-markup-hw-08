@@ -1,20 +1,12 @@
 .header-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    // right: 0;
-    // bottom: 0;
-    width: 100vw;
+    left: 0;    width: 100vw;
     height: 100vh;
     padding: 40px 48px;
     box-sizing: border-box;
-    // width: 100vw;
-    // height: 100vh;
-
-    background: rgb(255, 255, 255);
-  
-    opacity: 1;
-  
+    background: rgb(255, 255, 255);  
+    opacity: 1;  
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &.is-hidden {
       opacity: 0;
@@ -22,24 +14,14 @@
     }
   }
   
-
-  // .header-menu {
-  //   position:relative;
-  //   display: block;
-  //   overflow: hidden;
-  //   top: 0%;
-  //   right: 0%;
-  //   min-width: 100vw;
-  //   min-height: 100vh;
-  //   padding: 40px 48px;
   
   //   background-color: var(--primary-wite-color);
   //   transform: translate(0%, 0%) scale(1);
   //   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   //   .backdrop.is-hidden & {
-  //     transform: translate(0%, 0%) scale(1.1);
-   
+  //     transform: translate(0%, 0%) scale(1.1);   
   // }
+  
   .menu-nav-list {                 
     display: flex;   
     flex-direction: column;

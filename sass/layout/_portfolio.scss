@@ -1,21 +1,43 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px){
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &-buttons{
+    margin-top: -15px;
     margin-bottom: 50px;
     width: 80%;
-    margin-left: 0px;
+    @media screen and (min-width: 1200px){
+      margin-bottom: 40px;
+      width: 80%;
+
+    }
+    @media screen and (min-width: 768px){
+      &__list{
+        margin-top: 0;
+      }
+    }
+
 
     &__title {
       text-align: center;
     }
     &-list {
       display: flex;
-      flex-wrap: wrap;     
+      flex-wrap: wrap;
+
+   
       &__item {
-        // margin-left: auto;
         margin-right: 8px;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
+        margin-top: 15px;
+        @media screen and (min-width: 1200px){
+          margin-bottom: 0px;
+
+        }
       }
     }
   }
@@ -72,9 +94,7 @@
     &-list {
       display: flex;
       justify-content: center;
-      &__item + &__item {
-        margin-left: 8px;
-      }
+
     }
   }
 } 

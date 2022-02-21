@@ -24,8 +24,8 @@
         <a href="./index.html" class="logo"
           ><span class="logo-alt">Web</span>Studio</a
         >
-        <button class="header__menu" data-menu-open>
-        <svg class="icon " width="40" height="40">
+        <button class="header-menu-open" data-menu-open>
+        <svg class="header-menu-open__icon " width="40" height="40">
           <use href="./images/icons.svg#icon-menu"></use>
         </svg>
       </button>
@@ -521,28 +521,58 @@
     </div>    
   </footer>
 
-      <!--Меню навигации  -->
-      <div class="backdrop is-hidden" data-menu>
-        <div class="header-menu">
-  
-          <ul class="menu-nav list">
-            <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link ">Студия</a></li>
-            <li class="menu-nav__item">
-              <a href="./portfolio.html" class="menu-nav__link ">Портфолио</a>
-            </li>
-            <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакты</a></li>
-          </ul>
-  
-          <button data-menu-close class="close-button">
-            <svg class="close-button__icon " width="20" height="20">
-              <use href="./images/icons.svg#icon-cross"></use>
-            </svg>
-            </button>
-        </div>
-      </div>
-  
-      <script src="./js/menu.js"></script>
+        <!--Меню навигации  -->
+        <div class="header-menu is-hidden" data-menu>
+          <div class="menu-nav">
+      <ul class="menu-nav-list list">
+        <li class="menu-nav-list__item"><a href="./index.html" class="menu-nav-list__link ">Студия</a></li>
+        <li class="menu-nav-list__item">
+          <a href="./portfolio.html" class="menu-nav-list__link ">Портфолио</a>
+        </li>
+        <li class="menu-nav-list__item"><a href="" class="menu-nav-list__link">Контакты</a></li>
+      </ul>
+        <div class="menu-nav-contact">
+            <ul class="menu-nav-contact list">
+              <li class="menu-nav-contact__item ">
+                <a href="tell:+380961111111" 
+                class="menu-nav-contact__number link"
+                >+38 096 111 11 11</a
+                >    
+              </li>
 
+              <li class="menu-nav-contact__item ">
+                <a href="tell:+380961111111" 
+                class="menu-nav-contact__address link"
+                >info@devstudio.com</a
+                >    
+              </li>
+            </ul>
+        
+        <ul class="menu-nav-social list">
+          <li class="menu-nav-social__item"><a href="#" class="menu-nav-social__link link"
+            >Instagram</a></li
+            >
+              <li class="menu-nav-social__item"><a href="#" class="menu-nav-social__link link"
+            >Twiter</a></li
+            >
+            <li class="menu-nav-social__item"><a href="#" class="menu-nav-social__link link"
+            >Facebook</a></li
+            >
+            <li class="menu-nav-social__item"><a href="#" class="menu-nav-social__link link"
+            >Linkedin</a></li
+            >
+        </ul>      
+      </div>
+
+    <button data-menu-close class="menu-close-button">
+      <svg class="menu-close-button__icon " width="40" height="40">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg>
+      </button>
+  </div>
+  </div>
+
+  <script src="./js/menu.js"></script>
 
   </body>
 </html>
